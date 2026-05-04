@@ -54,4 +54,4 @@ Within our full PDF report (found in this repository), you can refer to Chapters
 
 ## Credits & Dataset License
 *   **Author:** Oussama AK-HAIL 
-*   **Dataset Source:** Raw audio utilized within this workflow originates from the [Multi-Keyboard Acoustic (MKA) Dataset](https://www.mdpi.com/2076-3417/13/11/6401), released under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+*   **Dataset Source:** Raw audio utilized within this workflow originates from the [Multi-Keyboard Acoustic (MKA) Dataset](https://data.mendeley.com/datasets/bpt2hvf8n3/4), released under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
