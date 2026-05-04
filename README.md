@@ -43,8 +43,8 @@ To handle the complexity of predicting across all the different keys on a keyboa
   Utilizes MATLAB's `fitcecoc` function to deploy a One-vs-All mechanism with an RBF Gaussian Kernel. Instead of just guessing between two keys, it natively trains distinct mathematical boundaries to differentiate across the entire keyboard layout.
 
 <p align="center">
-  <img src="media/3D%20PCA.png" alt="3D PCA Feature Space" width="400">
-  <img src="media/full%20confusion%20matrix.png" alt="Full 104-Class Confusion Matrix" width="400">
+  <img src="media/3D%20PCA.png" alt="3D PCA Feature Space" height="350">
+  <img src="media/full%20confusion%20matrix.png" alt="Full 104-Class Confusion Matrix" height="350">
 </p>
 
 ### 4. Interactive Live Prediction (`predict_full_keyboard.m`)
