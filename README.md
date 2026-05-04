@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="media/logo.png" alt="EchoStrike Logo" width="400">
+</p>
+
 # EchoStrike: Acoustic Side-Channel Analysis on Keyboards 🎙️⌨️
 
 ![MATLAB](https://img.shields.io/badge/Language-MATLAB-blue.svg)
@@ -6,6 +10,10 @@
 ![Status](https://img.shields.io/badge/Status-Complete-green.svg)
 
 ## Overview
+<p align="center">
+  <img src="media/result%20visualisation.png" alt="Topographic AI Prediction Map" width="600">
+</p>
+
 This repository contains a complete pipeline for analyzing, extracting, and deciphering acoustic side-channel emanations from physical keyboards. 
 
 The primary objective of this project is to demonstrate how the unique sound profile of mechanical variations in plastic switches can be exploited to classify keystrokes using Machine Learning. This project scales from simple binary classification entirely up to a **full 104-class keyboard classification architecture** (Achieving ~71% accuracy on raw acoustic data alone).
@@ -29,13 +37,15 @@ This is the core signal processing engine. It imports the segmented audio clips 
 - **The Golden Pipeline:** The raw waveform undergoes Fast Fourier Transform (FFT) analysis. The positive spectrum is extracted, converted logarithmically (dB scale), strictly Min-Max Normalized, and downsampled into exactly 1000 spectral bins. 
 
 ### 3. Artificial Intelligence Training
-Since a 104-class dilemma creates a massive geometry overlap in mathematical space, we utilize two separate architectural models:
+To handle the complexity of predicting across all the different keys on a keyboard simultaneously, we utilize an advanced Support Vector Machine algorithm:
 
 - **`train_full_keyboard.m` (Support Vector Machine):**
-  Uses the `fitcecoc` One-vs-All mechanism with an RBF Gaussian Kernel. It trains 104 localized boundaries to differentiate keys. Best suited for smaller datasets or fewer key categories due to heavy algorithmic execution costs.
-  
-- **`train_full_keyboard_rf.m` (Random Forest Ensemble):**
-  Constructs a dense forest matrix of interconnected decision trees. Radically outperforms SVM mathematically when scaling into the 100+ class domain. Generates absolute [0-1] probabilities instantaneously and evades high-memory overhead.
+  Utilizes MATLAB's `fitcecoc` function to deploy a One-vs-All mechanism with an RBF Gaussian Kernel. Instead of just guessing between two keys, it natively trains distinct mathematical boundaries to differentiate across the entire keyboard layout.
+
+<p align="center">
+  <img src="media/3D%20PCA.png" alt="3D PCA Feature Space" width="400">
+  <img src="media/full%20confusion%20matrix.png" alt="Full 104-Class Confusion Matrix" width="400">
+</p>
 
 ### 4. Interactive Live Prediction (`predict_full_keyboard.m`)
 The culmination of the project is the visualization engine. Loading the completed AI models, you can feed a blind audio sample into the script. The engine will:
@@ -54,4 +64,4 @@ Within our full PDF report (found in this repository), you can refer to Chapters
 
 ## Credits & Dataset License
 *   **Author:** Oussama AK-HAIL 
-*   **Dataset Source:** Raw audio utilized within this workflow originates from the [Multi-Keyboard Acoustic (MKA) Dataset](https://data.mendeley.com/datasets/bpt2hvf8n3/4), released under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
+*   **Dataset Source:** Raw audio utilized within this workflow originates from the [Multi-Keyboard Acoustic (MKA) Dataset](https://www.mdpi.com/2076-3417/13/11/6401), released under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**.
