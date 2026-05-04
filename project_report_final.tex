@@ -95,6 +95,13 @@ Department of Electrical Engineering\\[0.4cm]
 
 \chapter*{\Large{\textbf{Introduction:}}}
 \addcontentsline{toc}{chapter}{Introduction}
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.6\textwidth]{media/logo.png}
+\end{figure}
+
+This project is developed under the open-source product name \textbf{EchoStrike}. The complete source code, models, and visualization scripts are publicly available at the official repository: \url{https://github.com/OussamaAKHAIL/EchoStrike}.
+
 With the rapid development of computer technologies, information security has become a major issue. Passwords are widely used to protect access to computer systems, but they remain vulnerable to certain indirect attacks, notably \textbf{acoustic side-channel attacks}. Indeed, during typing, involuntary physical information, such as vibrations and sound or mechanical signals, can be emitted and exploited to deduce the actions performed by the user.
 
 In this context, this project focuses on the study of signals generated when typing on a keyboard. The objective is not to hack or steal passwords, but to understand and analyze the security risks related to physical keyboard emissions, in order to raise awareness of potential vulnerabilities and propose adapted protection solutions.
@@ -287,6 +294,12 @@ While achieving an 89.1\% accuracy on a binary classification problem proved the
 
 Initially, we expanded the scope from two keys to ten numerical keys (0 through 9). Unlike binary classification which utilizes a single decision boundary, differentiating ten classes requires a \textbf{One-vs-All (OvA)} approach.
 
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.6\textwidth]{media/10_keys.png}
+    \caption{The 10 numeric keys (0-9) targeted during the intermediate multi-class scaling phase.}
+\end{figure}
+
 \subsection{The One-vs-All Support Vector Machine}
 In the OvA paradigm, the Support Vector Machine cannot predict ten classes directly. Instead, the algorithm generates individual classifiers for each specific class. For our 10-key numeric dataset, ten distinct SVMs were trained:
 \begin{itemize}
@@ -301,7 +314,19 @@ To force the SVM to decipher highly nuanced differences between neighboring mech
 
 However, the RBF kernel requires extremely precise tuning of its hyperparameters—specifically the `BoxConstraint` (which controls outlier penalization) and the `KernelScale` (which defines the variance spread of the decision boundary). We deployed a \textbf{Bayesian Hyperparameter Optimization} function that iteratively trained and tested random parameter combinations to find the absolute maximum accuracy. 
 
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.8\textwidth]{media/hyper_parameters_10_keys.png}
+    \caption{Evolution of the minimum objective error during Bayesian Hyperparameter Optimization for the 10-key model.}
+\end{figure}
+
 While Bayesian Optimization ultimately pushed the 10-key model toward a highly refined accuracy, it resulted in exponentially larger computation times. The algorithm required hours to compute the optimal variables (`BoxConstraint` = 717.66, `KernelScale` = 0.27386) for just ten keys, hinting at a severe computational bottleneck that would need to be addressed as we expanded.
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.7\textwidth]{media/confusion_matrix_10_keys.png}
+    \caption{Confusion Matrix for the 10 numeric keys showing 73.20\% accuracy.}
+\end{figure}
 
 \clearpage
 \thispagestyle{empty}
@@ -371,9 +396,8 @@ Despite the complexities, our model successfully generated a dominant diagonal t
 
 \begin{figure}[H]
 \centering
-    % ADD PICTURE HERE: The massive 104x104 Confusion Matrix you sent me! 
-    \vspace{6cm}
-    \caption{[PLACEHOLDER] 104-Class Full Keyboard Confusion Matrix (Accuracy: 71.04\%)}
+    \includegraphics[width=1\textwidth]{media/full_confusion_matrix.png}
+    \caption{104-Class Full Keyboard Confusion Matrix (Accuracy: 71.04\%)}
 \end{figure}
 
 \clearpage
@@ -399,9 +423,8 @@ We plotted these compressed features as a 3-dimensional scatter graph. Over 30,0
 
 \begin{figure}[H]
 \centering
-    % ADD PICTURE HERE: The PCA 3D Scatter Plot (the colorful 'dots' visualization)
-    \vspace{6cm}
-    \caption{[PLACEHOLDER] Principal Component Analysis (1000D to 3D scatter visualization)}
+    \includegraphics[width=0.8\textwidth]{media/3D_PCA.png}
+    \caption{Principal Component Analysis (1000D to 3D scatter visualization)}
 \end{figure}
 
 \subsection{2D Topographic Heatmap Integration}
@@ -425,9 +448,8 @@ Using this fluid interpolation, we generate a glowing neon-green Topographic Hea
 
 \begin{figure}[H]
 \centering
-    % ADD PICTURE HERE: The minimalist keyboard outline showing the glowing hot neon green prediction!
-    \vspace{6cm}
-    \caption{[PLACEHOLDER] Immersive 2D Topographic Probabilistic Layout of the True Key position}
+    \includegraphics[width=1\textwidth]{media/result_visualisation.png}
+    \caption{Immersive 2D Topographic Probabilistic Layout of the True Key position}
 \end{figure}
 
 \clearpage
