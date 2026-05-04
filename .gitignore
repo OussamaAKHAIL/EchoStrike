@@ -1,0 +1,38 @@
+# ========================================
+# EchoStrike: GitHub Ignore Configuration
+# ========================================
+# This file tells Git which files to intentionally ignore when uploading
+# to the remote repository. This keeps your codebase looking extremely 
+# professional, clean, and free of massive binary files or local junk!
+
+# 1. Ignore MATLAB Crash Logs and Autosaves
+*.asv
+*.m~
+matlab_crash_dump.*
+
+# 2. Ignore Huge AI Models (Over 100MB)
+# Note: GitHub blocks uploads over 100MB unless you use Git Large File Storage (LFS)
+# Because the 'trained_svm_full_keyboard.mat' is gigantic, it's highly recommended
+# to let the users train their own model, or host the .mat file on Google Drive 
+# and link it in the README!
+*.mat
+
+# 3. Ignore LaTeX Compilation Junk 
+# (These are generated automatically when building the PDF, no need to upload them)
+*.aux
+*.bbl
+*.blg
+*.fls
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.synctex.gz
+*.lof
+*.lot
+
+# 4. Ignore Operating System Hidden Junk
+.DS_Store
+Thumbs.db
+desktop.ini
+__MACOSX/
