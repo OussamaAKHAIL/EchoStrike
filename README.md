@@ -17,7 +17,7 @@ This repository contains a complete pipeline for analyzing, extracting, and deci
 
 The primary objective of this project is to demonstrate how the unique sound profile of mechanical variations in plastic switches can be exploited to classify keystrokes using Machine Learning. This project scales from simple binary classification entirely up to a **full 104-class keyboard classification architecture** (Achieving ~71% accuracy on raw acoustic data alone).
 
-> **Disclaimer:** This project was realized by Oussama AK-HAIL at Abdelmalek Essaâdi University (Morocco) strictly for educational cybersecurity research. Its goal is to raise awareness regarding physical emission vulnerabilities and highlight protection protocols against acoustic eavesdropping.
+> **Disclaimer:** This project was realized by Oussama AK-HAIL at Abdelmalek Essaâdi University (Morocco) strictly for educational signal analysis research. Its goal is to raise awareness regarding physical emission vulnerabilities and highlight protection protocols against acoustic eavesdropping.
 
 ---
 
