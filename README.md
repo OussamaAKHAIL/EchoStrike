@@ -50,7 +50,9 @@ To handle the complexity of predicting across all the different keys on a keyboa
 The culmination of the project is the visualization engine. Loading the completed AI models, you can feed a blind audio sample into the script. The engine will:
 1. Print the direct categorical prediction. 
 2. Open a custom visual interface drawing a **2D Neon Topographic Heatmap**, charting the AI's complex probability densities directly atop a graphical, true-scale minimalist keyboard overlay. 
-
+<p align="center">
+  <img src="media/result%20visualisation.png" alt="Topographic AI Prediction Map" width="600">
+</p>
 ---
 
 ## 🛡️ Countermeasures
