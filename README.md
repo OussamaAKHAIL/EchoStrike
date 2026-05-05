@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/logo.png" alt="EchoStrike Logo" width="400">
+  <img src="media/logo-V2.jpeg" alt="EchoStrike Logo" width="400">
 </p>
 
 # EchoStrike: Acoustic Side-Channel Analysis on Keyboards 🎙️⌨️
