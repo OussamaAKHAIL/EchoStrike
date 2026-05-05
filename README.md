@@ -7,8 +7,7 @@
 ![MATLAB](https://img.shields.io/badge/Language-MATLAB-blue.svg)
 ![Machine Learning](https://img.shields.io/badge/Topic-Machine%20Learning-orange.svg)
 ![Signal Processing](https://img.shields.io/badge/Topic-Signal%20Processing-lightgrey.svg)
-![Status](https://img.shields.io/badge/Status-Complete-green.svg)
-
+![Status](https://img.shields.io/badge/Status-Active%20Development-blue.svg)
 ## Overview
 <p align="center">
   <img src="media/result%20visualisation.png" alt="Topographic AI Prediction Map" width="600">
