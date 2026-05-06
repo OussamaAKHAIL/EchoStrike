@@ -12,7 +12,7 @@ y_labels = y_labels(:);
 
 %% 2. Split into Training and Testing Sets
 fprintf('Splitting data...\n');
-cv = cvpartition(y_labels, 'HoldOut', 0.2);
+cv = cvpartition(y_labels, 'HoldOut', 0.19);
 
 X_train = X_features(training(cv), :);
 y_train = y_labels(training(cv), :);
