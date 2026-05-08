@@ -1,6 +1,6 @@
 <p align="center">
   <img src="media/logo-V2.jpeg" alt="EchoStrike Logo" width="400">
-</p>
+</p> 
 
 # EchoStrike: Acoustic Side-Channel Analysis on Keyboards 🎙️⌨️
 
