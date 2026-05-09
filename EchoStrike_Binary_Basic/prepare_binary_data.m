@@ -1,7 +1,6 @@
 % =========================================================================
 % EchoStrike: Binary Basic Data Preparation (Space vs Shift)
 % =========================================================================
-% Description:
 % This is the foundational script proving acoustic keystroke extraction.
 % It isolates the Fast Fourier Transform (FFT) features for exactly two 
 % keys (Right Shift and Space) and builds the baseline .mat dataset.
